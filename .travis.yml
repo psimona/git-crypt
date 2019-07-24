@@ -1,14 +1,8 @@
 anguage: cpp
-sudo: required
-dist: bionic
 compiler:
 - gcc
 os:
 - linux
-before_install:
-- echo $LANG
-- echo $LC_ALL
-install:
-- if [ $TRAVIS_OS_NAME == linux ]; then sudo apt-get libssl-dev; fi
-script:
-- if [ $TRAVIS_OS_NAME == linux ]; then make; fi
+- osx
+- windows
+
