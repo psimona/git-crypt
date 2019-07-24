@@ -9,5 +9,6 @@ matrix:
       homebrew:
         packages:
         - openssl
+        update: true
 script:
 - make
