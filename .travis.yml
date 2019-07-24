@@ -1,9 +1,13 @@
 language: cpp
 compiler:
 - gcc
-os:
-- linux
-- osx
-- windows
+matrix:
+  include:
+  - os: linux
+  - os: osx
+    addons:
+      homebrew:
+        packages:
+        - openssl
 script:
 - make
