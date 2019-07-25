@@ -12,8 +12,11 @@ matrix:
   - os: windows
     before_install:
     - choco install make conan
-    - mdkir build
+    script:
+    - mkdir build
     - cd build
     - conan install ..
+    - cd ..
+    - make
 script:
 - make
